@@ -171,13 +171,15 @@ try {
         await sendEmail(
             student.email,
             "New Upcoming School Event - RSU Cajidiocan",
-
+          
             `
             <div style="font-family:Arial;padding:20px;">
 
                 <h2 style="color:#174a80;">
                     RSU-Cajidiocan Campus
                 </h2>
+
+                <p>Hello Students!</p>
 
                 <h3>New School Event Announcement!</h3>
 
@@ -193,12 +195,24 @@ try {
 
                 <p><b>Description:</b> ${event.description}</p>
 
-                <p>
-                    Visit our School Event Registration website
-                    to view the event and register.
-                </p>
+               <p>
+    Visit our School Event Registration website
+    to view the event and register.
+</p>
 
-                <p>Thank you!</p>
+<a href="${process.env.BASE_URL}/#eventList"
+   style="background-color:#174a80;
+   color:white;
+   padding:12px 20px;
+   text-decoration:none;
+   border-radius:5px;
+   display:inline-block;">
+    REGISTER NOW
+</a>
+
+   <p>Thank you!</p>
+
+                
 
             </div>
             `
