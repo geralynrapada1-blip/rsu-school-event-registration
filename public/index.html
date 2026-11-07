@@ -1,0 +1,292 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSU-Cajidiocan School Event Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h2>RSU-CAJIDIOCAN</h2>
+        <p>School Event Registration</p>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#organizer">Organizer</a>
+        <a href="#subscribe">Notifications</a>
+    </nav>
+</header>
+
+<!-- HOME PAGE -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <p class="subtitle">
+            ROMBLON STATE UNIVERSITY - CAJIDIOCAN CAMPUS
+        </p>
+
+        <h1>
+            Be Part of Every
+            <span>Campus Moment.</span>
+        </h1>
+
+        <p>
+            Discover school activities, register online,
+            and keep track of your event participation
+            in one convenient place.
+        </p>
+
+        <a href="#events" class="btn">Explore Events</a>
+    </div>
+
+    <div class="hero-card">
+        <h2>Stay Informed.</h2>
+        <h2>Get Involved.</h2>
+        <p>
+            Registration made simple for
+            RSU-Cajidiocan students.
+        </p>
+    </div>
+
+</section>
+
+<!-- EVENTS SECTION -->
+<section class="section" id="events">
+
+    <h2>Upcoming Events</h2>
+    <p>Check the available school activities.</p>
+
+    <div id="eventList" class="event-grid">
+        Loading events...
+    </div>
+
+</section>
+
+<!-- EMAIL SUBSCRIPTION SECTION -->
+
+<section class="section subscription" id="subscribe">
+
+    <h2>Stay Updated with Campus Events!</h2>
+
+    <p>
+        Subscribe to our email notifications and
+        receive announcements about upcoming
+        RSU-Cajidiocan school events.
+    </p>
+
+    <form id="subscribeForm">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label>Email Address</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <label class="consent-label">
+            <input
+                type="checkbox"
+                name="consent"
+                required
+            >
+            I agree to receive school event announcements
+            and email notifications.
+        </label>
+
+        <button type="submit" class="btn">
+            Subscribe to Notifications
+        </button>
+
+        <p id="subscribeMessage"></p>
+
+    </form>
+
+</section>
+
+<!-- REGISTRATION SECTION -->
+<section class="section registration" id="register">
+
+    <h2>Student Registration</h2>
+
+    <form id="registrationForm">
+
+        <label>Choose Event</label>
+        <select id="eventId" name="eventId" required>
+            <option value="">Select an event</option>
+        </select>
+
+        <label>Full Name</label>
+        <input
+            type="text"
+            name="studentName"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label>Student ID</label>
+        <input
+            type="text"
+            name="studentId"
+            placeholder="Enter student ID"
+            required
+        >
+
+        <label>Email Address</label>
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            required
+        >
+
+        <label>Course</label>
+        <input
+            type="text"
+            name="course"
+            placeholder="Example: BSIT"
+            required
+        >
+
+        <label>Year Level</label>
+        <select name="yearLevel" required>
+            <option value="">Select year level</option>
+            <option>First Year</option>
+            <option>Second Year</option>
+            <option>Third Year</option>
+            <option>Fourth Year</option>
+        </select>
+
+        <button type="submit" class="btn">
+            Submit Registration
+        </button>
+
+        <p id="registrationMessage"></p>
+
+    </form>
+
+</section>
+
+<!-- ORGANIZER DASHBOARD -->
+<section class="section" id="organizer">
+
+    <h2>Organizer Dashboard</h2>
+
+    <div class="dashboard-stats">
+
+        <div class="stat-card">
+            <p>Total Events</p>
+            <h2 id="totalEvents">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Registrations</p>
+            <h2 id="totalRegistrations">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p>Students Present</p>
+            <h2 id="totalPresent">0</h2>
+        </div>
+
+    </div>
+
+    <!-- ADD EVENT -->
+    <div class="form-card">
+
+        <h3>Add School Event</h3>
+
+        <form id="eventForm">
+
+            <label>Event Title</label>
+            <input type="text" name="title" required>
+
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+
+            <label>Date</label>
+            <input type="date" name="date" required>
+
+            <label>Time</label>
+            <input type="time" name="time" required>
+
+            <label>Venue</label>
+            <input type="text" name="venue" required>
+
+            <label>Category</label>
+            <input type="text" name="category">
+
+            <label>Registration Limit</label>
+            <input type="number" name="capacity" min="1" value="100" required>
+
+            <button type="submit" class="btn">
+                Add Event
+            </button>
+
+            <p id="eventMessage"></p>
+
+        </form>
+
+    </div>
+
+    <!-- REGISTRATION RECORDS -->
+    <div class="form-card">
+
+        <h3>Student Registration Records</h3>
+
+        <button id="refreshButton" type="button" class="btn">
+            Refresh Records
+        </button>
+
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Event</th>
+                        <th>Attendance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="registrationRows">
+                    <tr>
+                        <td colspan="4">No records yet.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <h3>RSU-Cajidiocan Campus</h3>
+    <p>School Event Registration System</p>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

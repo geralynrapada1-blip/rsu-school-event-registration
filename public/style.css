@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #26364a;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo h2 {
+    color: #174a80;
+    font-size: 20px;
+}
+
+.logo p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #26364a;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2463a6;
+}
+
+/* HOMEPAGE */
+
+.hero {
+    margin: 30px auto;
+    width: 86%;
+    min-height: 390px;
+    padding: 60px;
+    border-radius: 20px;
+    background: linear-gradient(
+        120deg,
+        #142b4a,
+        #2463a6
+    );
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c6ddf4;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f1bd58;
+}
+
+.hero-content > p:not(.subtitle) {
+    line-height: 1.8;
+    color: #e0eaf5;
+    margin-bottom: 25px;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 30px;
+    min-width: 220px;
+}
+
+.hero-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: #2463a6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero .btn {
+    background: white;
+    color: #174a80;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    width: 86%;
+    margin: 60px auto;
+}
+
+.section h2 {
+    color: #174a80;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* EVENT CARDS */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.event-card h3 {
+    color: #174a80;
+    margin: 15px 0;
+}
+
+.event-card p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.event-card button {
+    margin-top: 15px;
+}
+
+.category {
+    color: #2463a6;
+    background: #eaf3fc;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* REGISTRATION FORM */
+
+.registration {
+    background: #eaf2fa;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #d5dfeb;
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2463a6;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .btn {
+    margin-top: 20px;
+}
+
+/* DASHBOARD */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-card h3 {
+    color: #174a80;
+    margin-bottom: 15px;
+}
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background: #edf3f9;
+    color: #174a80;
+}
+
+td {
+    color: #475569;
+}
+
+.small-action {
+    background: #2463a6;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MESSAGES */
+
+#registrationMessage,
+#eventMessage {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* FOOTER */
+
+footer {
+    background: #142b4a;
+    color: white;
+    padding: 30px 7%;
+    text-align: center;
+}
+
+footer p {
+    color: #c6d5e5;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero-card {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .event-grid,
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        width: 90%;
+    }
+}
+/* EMAIL SUBSCRIPTION */
+
+.subscription {
+    background: linear-gradient(
+        120deg,
+        #142b4a,
+        #2463a6
+    );
+
+    padding: 45px;
+    border-radius: 20px;
+    color: white;
+}
+
+.subscription h2 {
+    color: white !important;
+    font-size: 28px;
+}
+
+.subscription > p {
+    color: #dce9f7 !important;
+    line-height: 1.7;
+}
+
+.subscription form {
+    max-width: 650px;
+    margin-top: 25px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.consent-label input {
+    width: auto;
+    margin: 0;
+}
+
+.subscription .btn {
+    margin-top: 20px;
+}
